@@ -9,10 +9,6 @@ const userData = {
   isLoggedIn: true,
 };
 
-app.get("/user", (req, res) => {
-  res.json(userData);
-});
-
 app.listen(port, function () {
   console.log(`app is running on port number ${port}`);
 });
@@ -23,4 +19,8 @@ app.get("/", function (request, response) {
 
 app.get("/login", (req, res) => {
   res.send("welcome to login page");
+});
+
+app.get("/user", (req, res) => {
+  res.json(userData);
 });
